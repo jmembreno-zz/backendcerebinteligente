@@ -35,7 +35,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
 
-    res.send(database.usuario);
+    res.send('La Raiz Esta Trabajano');
 
 });
 
