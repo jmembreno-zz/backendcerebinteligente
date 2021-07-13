@@ -52,7 +52,7 @@ app.put('/imagen', (req,res)=>{imagen.imagenmanejo(req,res,db)});
 app.post('/imagenurl', (req,res)=>{imagen.manejollamadaap(req,res)});
 
 
-app.listen(3000, () => {
-    console.log('La app se esta ejucutando en el puerto 3000');
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`La app se esta ejucutando en el puerto ${process.env.PORT}`);
 });
 
