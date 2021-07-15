@@ -42,7 +42,7 @@ const manejaregistro = (req, res, db, bcrypt) => {
             .then(trx.commit)
             .catch(trx.rollback)
     })
-        .catch(err => res.status(400).json('No se Pudo Registrar'));
+        .catch(err => res.status(400).json('No se Pudo Registrar problemas con bd de postgres'));
 
 
 
