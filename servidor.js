@@ -15,13 +15,22 @@ const perfil = require('./controles/perfil');
 const imagen = require('./controles/imagen');
 
 
-const db = knex({
+/*const db = knex({
     client: 'pg',
     connection: {
         host: '127.0.0.1', //es lo mismo que localhost
         user: 'postgres',
         password: 'admin',
         database: 'cerebro_inteligente'
+    }
+});*/
+
+const db = knex({
+    client: 'pg',
+    connectionString: {
+        host: process.env.DATABASE_URL, //es lo mismo que localhost
+        ssl:true,
+
     }
 });
 
